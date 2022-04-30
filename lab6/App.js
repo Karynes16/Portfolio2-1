@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import LoginApp from './LoginApp';
-import HelpCount from './HelpCount';
+import LoginHelp from './LoginHelp';
 import Greeting from './Greeting';
 
 export default function App() {
