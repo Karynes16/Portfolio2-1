@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import LoginApp from './LoginApp';
 import LoginHelp from './LoginHelp';
 import Greeting from './Greeting';
+// import UserTimer form './UserTimer';
 
 export default function App() {
   return (
