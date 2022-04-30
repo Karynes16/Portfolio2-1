@@ -3,14 +3,14 @@ import { Text, StyleSheet } from 'react-native';
 
 
 function Timer () {
-    const [counter, setCounter] = useState(0)
+    const [count, setcount] = useState(0)
     useEffect (() => {
         let interval
-        const updateCounter = () => {
-        setCounter(currentValue => currentValue + 1)
+        const updatecount = () => {
+        setcount(currentVal => currentVal + 1)
     }
  interval = setInterval(() => {
-        updateCounter()
+        updatecount()
         }, 60000)
         return () => {
             clearImmediate(interval)
@@ -19,9 +19,9 @@ function Timer () {
     return (
         <div>
             <Text style={StyleSheet.text}>
-                This page should refresh after 60 seconds.
+                Your page should refresh after 60 seconds.
                 <br></br>
-                This page has currently refreshed {counter} times for your convenience.
+                Your page has currently refreshed {count} times for your convenience. Your welcome!
             </Text>
         </div>
     )
