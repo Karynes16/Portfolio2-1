@@ -28,10 +28,10 @@ export default function LoginApp() {
     <TextInput value={pass} onChangeText={text => setPass(text)} secureTextEntry={true} placeholder="Password"style={styles.textinput}></TextInput>
     <Text style={styles.error}>{error !== undefined ? error : ""}</Text>
     <Pressable style={styles.button} onPress={() => goLogin()}>
-        <Text style={styles.text}>Log in!</Text>
+        <Text style={styles.text}>Log in here!</Text>
     </Pressable>
     </>
-    : <Text>Hey there, {user}! Welcome!</Text>
+    : <Text>Hey there, {user}! Welcome to the page!</Text>
 }
 
 const styles = StyleSheet.create({
