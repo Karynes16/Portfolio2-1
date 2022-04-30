@@ -6,11 +6,11 @@ function Timer () {
     const [count, setcount] = useState(0)
     useEffect (() => {
         let interval
-        const updatecount = () => {
+        const updateCount = () => {
         setcount(currentVal => currentVal + 1)
     }
  interval = setInterval(() => {
-        updatecount()
+        updateCount()
         }, 60000)
         return () => {
             clearImmediate(interval)

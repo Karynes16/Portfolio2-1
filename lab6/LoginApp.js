@@ -5,32 +5,36 @@ const NO_USER = "Error, no username entered!"
 const INCORRECT_PASSWORD = "Error, Incorrect Password"
 
 export default function LoginApp() {
-    let [loggedIn, setLoggedIn] = useState(false)
+    let [logIn, setLogIn] = useState(false)
     let  [pass, setPass] = useState("")
     let [user, setUser] = useState("")
     let [error, setError] = useState(undefined)
     let goLogin = useCallback(() => {
         if (user === "") {
+            //error message
             setError(NO_USER)
         } else {
             if (pass === "Ch@rge!") {
-                setLoggedIn(true)
+                setLogIn(true)
             } else {
+                //error message
                 setError(INCORRECT_PASSWORD)
             }
         }
     }
     )
-    return !loggedIn ?
+    return !logIn ?
     <>
     <Text style={styles.welcome}> Log In!</Text>
     <TextInput autoFocus={true} value={user} onChangeText={text => setUser(text)} placeholder="Username" style={styles.textinput}></TextInput>
     <TextInput value={pass} onChangeText={text => setPass(text)} secureTextEntry={true} placeholder="Password"style={styles.textinput}></TextInput>
     <Text style={styles.error}>{error !== undefined ? error : ""}</Text>
     <Pressable style={styles.button} onPress={() => goLogin()}>
+        {/* message shown */}
         <Text style={styles.text}>Log in here!</Text>
     </Pressable>
     </>
+    //message shown
     : <Text>Hey there, {user}! Welcome to the page!</Text>
 }
 
