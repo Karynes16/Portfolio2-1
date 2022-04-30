@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import LoginApp from './LoginApp';
+import HelpCount from './HelpCount';
+import Greeting from './Greeting';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Timer></Timer>
+      <br></br>
+      <Greeting></Greeting>
+      <br></br>
+      <HelpCount></HelpCount>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button: {
+    padding: 15,
+  }
 });
